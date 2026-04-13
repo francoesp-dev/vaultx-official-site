@@ -1,36 +1,40 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# VaultX Web — Official Landing Page 🌐
 
-## Getting Started
+[![License: MIT](https://img.shields.io/badge/License-MIT-emerald.svg)](https://opensource.org/licenses/MIT)
+[![Next.js](https://img.shields.io/badge/Next.js-14.x-black?logo=nextdotjs)](https://nextjs.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.x-38B2AC?logo=tailwindcss)](https://tailwindcss.com/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.x-blue?logo=typescript)](https://www.typescriptlang.org/)
 
-First, run the development server:
+This is the official promotional website and distribution portal for **VaultX**, a military-grade, local-first password manager. The site is designed to showcase the security features and provide direct access to the application's distribution.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+[Visit the Mobile App Repository 📱](https://github.com/tu-usuario/vaultx)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🎯 Purpose
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+The goal of this project is to provide a professional, high-performance landing page that:
+* Explains the core security pillars of VaultX (Offline-first & AES-256).
+* Provides a secure entry point for downloading the latest APK releases.
+* Demonstrates modern web development practices using the Next.js App Router.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🚀 Features
 
-## Learn More
+* **Responsive Design:** Fully optimized for mobile and desktop devices.
+* **Performance Focused:** Utilizing Next.js Image Optimization and static generation for instant load times.
+* **Dark Aesthetic:** Matches the VaultX mobile app visual identity.
+* **Direct Linkage:** Seamless connection to the GitHub Releases API for app distribution.
 
-To learn more about Next.js, take a look at the following resources:
+## 🛠️ Tech Stack
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+* **Framework:** Next.js 14 (App Router).
+* **Styling:** Tailwind CSS.
+* **Icons:** Lucide React.
+* **Deployment:** Vercel.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## ⚙️ Installation
 
-## Deploy on Vercel
+1. Clone the repo: `git clone https://github.com/youruser/vaultx-web.git`
+2. Install dependencies: `npm install`
+3. Run development server: `npm run dev`
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+Developed by **Franco** — Full Stack Developer & Systems Engineering Student.
