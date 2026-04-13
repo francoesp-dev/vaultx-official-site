@@ -32,7 +32,7 @@ The goal of this project is to provide a professional, high-performance landing 
 
 ## ⚙️ Installation
 
-1. Clone the repo: `git clone https://github.com/youruser/vaultx-web.git`
+1. Clone the repo: `git clone https://github.com/francoesp-dev/vaultx-official-site.git`
 2. Install dependencies: `npm install`
 3. Run development server: `npm run dev`
 
