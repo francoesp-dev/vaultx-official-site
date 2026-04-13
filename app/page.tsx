@@ -78,17 +78,13 @@ export default function Home() {
           transition={{ duration: 0.5, delay: 0.4 }}
           className="flex flex-col sm:flex-row gap-4"
         >
-          <button
-            onClick={() =>
-              alert(
-                "The v1.0.0 APK is currently compiling on our servers. Please check back in a few minutes!",
-              )
-            }
-            className="flex items-center justify-center gap-2 bg-emerald-600/60 cursor-not-allowed text-white px-8 py-4 rounded-full font-bold text-lg transition-all border border-emerald-500/30"
+          <a
+            href="https://github.com/francoesp-dev/vaultx-password-manager/releases/download/v1.0.0/VaultX_v1.0.0.apk"
+            className="flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white px-8 py-4 rounded-full font-bold text-lg transition-all shadow-lg shadow-emerald-900/20 hover:scale-105 active:scale-95"
           >
-            <Download size={20} className="animate-pulse" />
-            Compiling APK...
-          </button>
+            <Download size={20} />
+            Download APK
+          </a>
           <a
             href="https://github.com/francoesp-dev/vaultx-password-manager"
             target="_blank"
