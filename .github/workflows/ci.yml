@@ -1,0 +1,37 @@
+name: Next.js CI Guardian
+
+# ¿Cuándo se ejecutará esta acción?
+on:
+  push:
+    branches: [ "dev" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build-and-test:
+    name: Typecheck & Lint
+    runs-on: ubuntu-latest # Una máquina virtual de Linux gratuita en GitHub
+
+    steps:
+      # 1. Descarga tu código a la máquina virtual
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # 2. Instala Node.js
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm' # Esto acelera las instalaciones futuras
+
+      # 3. Instala las dependencias limpiamente
+      - name: Install dependencies
+        run: npm ci
+
+      # 4. Verifica errores de formato (ESLint)
+      - name: Run Linter
+        run: npm run lint
+
+      # 5. Verifica que Next.js pueda compilar sin errores de TypeScript
+      - name: Test Build
+        run: npm run build
