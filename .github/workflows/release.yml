@@ -1,0 +1,36 @@
+name: Automatic Release
+
+# ¡IMPORTANTE! Este robot SOLO vigila la rama de producción.
+on:
+  push:
+    branches: [ "main" ]
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+jobs:
+  release:
+    name: Semantic Release
+    runs-on: ubuntu-latest
+    # Necesita permisos especiales para poder escribir y crear "Tags" en tu repositorio
+    permissions:
+      contents: write
+      issues: write
+      pull-requests: write
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # Descarga todo el historial de commits para poder leerlos
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Run Semantic Release
+        env:
+          # GitHub provee este token de seguridad automáticamente, no tienes que crear nada.
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: npx semantic-release

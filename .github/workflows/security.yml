@@ -1,0 +1,36 @@
+name: Security Auditor
+
+# Se ejecuta al subir a dev, al abrir un PR a main, y automáticamente cada lunes.
+on:
+  push:
+    branches: [ "dev" ]
+  pull_request:
+    branches: [ "main" ]
+  schedule:
+    - cron: '0 0 * * 1'
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+jobs:
+  audit:
+    name: NPM Vulnerability Scan
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: 'npm'
+
+      # Instala las dependencias
+      - name: Install dependencies
+        run: npm ci
+
+      # Ejecuta la auditoría. Solo fallará si encuentra vulnerabilidades de nivel ALTO o CRÍTICO.
+      - name: Run Security Audit
+        run: npm audit --audit-level=high
