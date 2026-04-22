@@ -35,7 +35,7 @@ export default function Home() {
           rel="noreferrer"
           className="text-zinc-400 hover:text-white transition-colors"
         >
-          <GithubIcon className="w- h-6" />
+          <GithubIcon className="w-6 h-6" />
         </motion.a>
       </nav>
 
